@@ -1,0 +1,350 @@
+<html>
+
+<head>
+
+	<title>Sustainable Transportation Tracker API </title>
+	<link rel="stylesheet" href="styling.css">
+
+</head>
+
+<body id=body>
+
+	<h1><b>Sustainable Transportation Tracker User Guide</b></h1>
+
+	<h2>
+		<font size="+2">Format:</font>
+	</h2>
+
+	<table id=table1>
+
+		<tr>
+			<th>Format</th>
+			<th> Content</th>
+		</tr>
+		<tr>
+			<td>txt</td>
+			<td>text/plain</td>
+		</tr>
+		<tr>
+			<td>js</td>
+			<td>code/javascript</td>
+		</tr>
+		<tr>
+			<td>json</td>
+			<td>text/json</td>
+		</tr>
+		<tr>
+			<td>html</td>
+			<td>text/html</td>
+		</tr>
+
+	</table>
+
+
+	<h3>
+		<font size="+2">API Methods:</font>
+	</h3>
+
+	<div><b>
+			<font size="+1">GET Methods</font>
+		</b></div>
+
+	<br>
+
+	<b>Emissions Data URL:</b> <a
+		href="https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-data">https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-data</a>
+
+	<p>Loads the emissions data that certain types of vehicles emit on a daily basis based on their fueltype</p>
+
+	<table id=table1>
+
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>DataType</th>
+		</tr>
+		<tr>
+			<td>vehicleType</td>
+			<td>&nbsp;The type of vehicle that a user can choose from</td>
+			<td>&nbsp; String</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>fueltype</td>
+			<td>&nbsp;The type of fuel that a vehicle uses between diesel or petrol</td>
+			<td>&nbsp; Integer</td>
+		</tr>
+		</tr>
+
+	</table>
+
+	<br>
+
+	<b>Emission Reduction Tips URL:</b> <a
+		href="https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-reduction-tips">https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-reduction-tips</a>
+
+	<p>Fetches a random tip from the database to be displayed to the user</p>
+
+	<table id=table1>
+
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>DataType</th>
+		</tr>
+		<tr>
+			<td>tip</td>
+			<td>&nbsp;A random tip for vehicle emission reduction will be given</td>
+			<td>&nbsp; String</td>
+		</tr>
+
+
+	</table>
+
+	<br>
+
+	<div><b>
+		<font size="+1">Restricted GET Methods</font>
+	</b></div>
+
+
+
+
+</table>
+
+<br>
+
+
+	<div><b>
+			<font size="+1">POST Methods</font>
+		</b></div>
+
+	<br>
+
+	<b>Create User URL:</b> <a
+		href="http://localhost:8080/api/user/create-user">http://localhost:8080/api/user/create-user</a>
+
+	<p>Creates a new user account for logging in and using the API application</p>
+
+	<table id=table1>
+
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>DataType</th>
+		</tr>
+		<tr>
+			<td>email</td>
+			<td>&nbsp;The user's email they want to associate their account with</td>
+			<td>&nbsp; String</td>
+		</tr>
+		<tr>
+			<td>password</td>
+			<td>&nbsp;The user's password to associate their account with</td>
+			<td>&nbsp; String</td>
+		</tr>
+		<tr>
+			<td>displayName</td>
+			<td>&nbsp;The user's custom name they want to display on their profile</td>
+			<td>&nbsp; String</td>
+		</tr>
+
+	</table>
+
+
+
+	<br>
+
+	<b>Reset User Password URL:</b> <a
+		href="http://localhost:8080/api/user/reset-password">http://localhost:8080/api/user/reset-password</a>
+
+	<p>Replaces a user's current password with a new chosen one</p>
+
+	<table id=table1>
+
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>DataType</th>
+		</tr>
+		<tr>
+			<td>email</td>
+			<td>&nbsp;The user's email associated with their account</td>
+			<td>&nbsp; String</td>
+		</tr>
+		<tr>
+			<td>currentPassword</td>
+			<td>&nbsp;The user's current password for their account</td>
+			<td>&nbsp; String</td>
+		</tr>
+		<tr>
+			<td>newPassword</td>
+			<td>&nbsp;The user's new password for their account</td>
+			<td>&nbsp; String</td>
+		</tr>
+
+	</table>
+
+	<br>
+
+	<b>Log Transportation Data URL:</b> <a
+		href="http://localhost:8080/api/transportation/log-transportation">http://localhost:8080/api/transportation/log-transportation</a>
+
+	<p>Write the transportaion data of the current day into the API database</p>
+
+	<table id=table1>
+
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>DataType</th>
+		</tr>
+		<tr>
+			<td>transportationType</td>
+			<td>&nbsp;The chosen transportation vehicle used</td>
+			<td>&nbsp; String</td>
+		</tr>
+		<tr>
+			<td>distance</td>
+			<td>&nbsp;The total distance that the user has travelled in kilometers</td>
+			<td>&nbsp; Integer</td>
+		</tr>
+		<tr>
+			<td>fuelType</td>
+			<td>&nbsp;The type of fuel used within the vehicle</td>
+			<td>&nbsp; String</td>
+		</tr>
+
+	</table>
+
+	<br>
+
+	<b>Emission Calculation URL:</b> <a
+		href="http://localhost:8080/api/transportation/emission-calculate">http://localhost:8080/api/transportation/emission-calculate</a>
+
+	<p>Calculates the total Emissions of a single day</p>
+
+	<table id=table1>
+
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>DataType</th>
+		</tr>
+		<tr>
+			<td>transportationType</td>
+			<td>&nbsp;The chosen transportation vehicle used</td>
+			<td>&nbsp; String</td>
+		</tr>
+		<tr>
+			<td>distance</td>
+			<td>&nbsp;The total distance that the user has travelled in kilometers</td>
+			<td>&nbsp; Integer</td>
+		</tr>
+		<tr>
+			<td>fuelType</td>
+			<td>&nbsp;The type of fuel used within the vehicle</td>
+			<td>&nbsp; String</td>
+		</tr>
+
+	</table>
+
+	<br>
+
+	<b>Compare Emission Rates URL:</b> <a
+		href="http://localhost:8080/api/transportation/compare-emission">http://localhost:8080/api/transportation/compare-emission</a>
+
+	<p>Compares the Total Emissions calculated over two different distances including vehicle and fueltypes </p>
+
+	<table id=table1>
+
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>DataType</th>
+		</tr>
+		<tr>
+			<td>distance1</td>
+			<td>&nbsp;The first distance that the user has travelled in kilometers</td>
+			<td>&nbsp; Integer</td>
+		</tr>
+		<tr>
+			<td>vehicle</td>
+			<td>&nbsp;The chosen transportation vehicle used</td>
+			<td>&nbsp; String</td>
+		</tr>
+		<tr>
+			<td>fuelType</td>
+			<td>&nbsp;The type of fuel used within the vehicle</td>
+			<td>&nbsp; String</td>
+		</tr>
+		<tr>
+			<td>distance2</td>
+			<td>&nbsp;The second distance that the user has travelled in kilometers</td>
+			<td>&nbsp; Integer</td>
+		</tr>
+
+	</table>
+
+	<h4>
+		<font size="+2">Responses To Input:</font>
+	</h4>
+
+	<div><b>Successfull Request:</b> Returns a 200 response code and Calculates results for each function and displays
+		it to the user.</div>
+	<br>
+	<div><b>Unsuccessfull Request:</b> Returns a 400 response code and Displays to the user what the error is and/or
+		where the error was found.</div>
+
+	<h5>
+		<font size="+2">The JSON Description of Responses:</font>
+	</h5>
+
+	<b>Successfull Response:</b>
+
+	<p></p>
+
+	<table id=table1>
+
+		<tr>
+			<th>Parameter</th>
+			<th>Result of Method Used</th>
+		</tr>
+		<tr>
+			<td>error</td>
+			<td>false</td>
+		</tr>
+		<tr>
+			<td>result</td>
+			<td>An appropriate response will be generated based on the method used and displayed to the user.</td>
+		</tr>
+
+	</table>
+
+	<br>
+
+	<b>Unsuccessfull Response:</b>
+
+	<p></p>
+
+	<table id=table1>
+
+		<tr>
+			<th>Parameter</th>
+			<th>Result of Method Used</th>
+		</tr>
+		<tr>
+			<td>error</td>
+			<td>true</td>
+		</tr>
+		<tr>
+			<td>result</td>
+			<td>An approprate error response will be displayed to the user and will alert where the error was found.
+			</td>
+		</tr>
+
+	</table>
+
+</body>
+
+</html>
