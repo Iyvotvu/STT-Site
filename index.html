@@ -2,139 +2,410 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainable Transportation Tracker API</title>
-    <link rel="stylesheet" href="styling.css">
-    <style>
-        /* Add your additional styles here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sustainable Transportation Tracker API</title>
+	<link rel="stylesheet" href="styling.css">
+	<style>
+		/* Add your additional styles here */
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
 
-        h1 {
-            font-weight: bold;
-        }
+		h1 {
+			font-weight: bold;
+		}
 
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-size: larger;
-            margin-bottom: 10px;
-        }
+		h2,
+		h3,
+		h4,
+		h5 {
+			font-size: larger;
+			margin-bottom: 10px;
+		}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin: 20px 0;
+		}
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
+		th,
+		td {
+			border: 1px solid #ddd;
+			padding: 8px;
+			text-align: left;
+		}
 
-        th {
-            background-color: #f2f2f2;
-        }
+		th {
+			background-color: #f2f2f2;
+		}
 
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
+		a {
+			text-decoration: none;
+			color: #007BFF;
+		}
 
-        a:hover {
-            text-decoration: underline;
-        }
+		a:hover {
+			text-decoration: underline;
+		}
 
-        .section {
-            margin-bottom: 40px;
-        }
+		.section {
+			margin-bottom: 40px;
+		}
 
-        .article {
-            margin-bottom: 20px;
-        }
-    </style>
+		.article {
+			margin-bottom: 20px;
+		}
+	</style>
 </head>
 
 <body id="body">
 
-    <header>
-        <h1>Sustainable Transportation Tracker User Guide</h1>
-    </header>
+	<header>
+		<h1>Sustainable Transportation Tracker User Guide</h1>
+	</header>
 
-    <div class="section">
-        <h2>Format:</h2>
+	<div class="section">
+		<h2>Format:</h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Format</th>
-                    <th>Content</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>txt</td>
-                    <td>text/plain</td>
-                </tr>
-                <tr>
-                    <td>js</td>
-                    <td>code/javascript</td>
-                </tr>
-                <tr>
-                    <td>json</td>
-                    <td>text/json</td>
-                </tr>
-                <tr>
-                    <td>html</td>
-                    <td>text/html</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+		<table>
+			<thead>
+				<tr>
+					<th>Format</th>
+					<th>Content</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>txt</td>
+					<td>text/plain</td>
+				</tr>
+				<tr>
+					<td>js</td>
+					<td>code/javascript</td>
+				</tr>
+				<tr>
+					<td>json</td>
+					<td>text/json</td>
+				</tr>
+				<tr>
+					<td>html</td>
+					<td>text/html</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
-    <div class="section">
-        <h3>API Methods:</h3>
+	<div class="section">
+		<h3>API Methods:</h3>
 
-        <div class="article">
-            <h4>GET Methods</h4>
+		<div class="article">
+			<h4>GET Methods</h4>
 
-            <p><strong>Emissions Data URL:</strong> <a target="_blank" href="https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-data">https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-data</a></p>
+			<p><strong>Emissions Data URL:</strong> <a target="_blank"
+					href="https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-data">https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-data</a>
+			</p>
 
-            <p>Loads the emissions data that certain types of vehicles emit on a daily basis based on their fuel type</p>
+			<p>Loads the emissions data that certain types of vehicles emit on a daily basis based on their fuel type
+			</p>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Description</th>
-                        <th>DataType</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>vehicleType</td>
-                        <td>The type of vehicle that a user can choose from</td>
-                        <td>String</td>
-                    </tr>
-                    <tr>
-                        <td>fueltype</td>
-                        <td>The type of fuel that a vehicle uses between diesel or petrol</td>
-                        <td>Integer</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>vehicleType</td>
+						<td>The type of vehicle that a user can choose from</td>
+						<td>String</td>
+					</tr>
+					<tr>
+						<td>fueltype</td>
+						<td>The type of fuel that a vehicle uses between diesel or petrol</td>
+						<td>Integer</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
-        <!-- Additional API methods go here -->
+		<div class="article">
+			<p><strong>Emission Reduction Tips URL:</strong> <a target="_blank"
+					href="https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-reduction-tips">https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-reduction-tips</a>
+			</p>
 
-    </div>
+			<p>Fetches a random tip from the database to be displayed to the user</p>
 
-    <!-- Other sections go here -->
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>tip</td>
+						<td>A random tip for vehicle emission reduction will be given</td>
+						<td>String</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- Additional GET methods go here -->
+
+		<div class="article">
+			<h4>Restricted GET Methods</h4>
+			<!-- Describe restricted GET methods here -->
+		</div>
+
+		<div class="article">
+			<h4>POST Methods</h4>
+
+			<p><strong>Create User URL:</strong> <a target="_blank"
+					href="http://localhost:8080/api/user/create-user">http://localhost:8080/api/user/create-user</a></p>
+
+			<p>Creates a new user account for logging in and using the API application</p>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>email</td>
+						<td>The user's email they want to associate their account with</td>
+						<td>String</td>
+					</tr>
+					<tr>
+						<td>password</td>
+						<td>The user's password to associate their account with</td>
+						<td>String</td>
+					</tr>
+					<tr>
+						<td>displayName</td>
+						<td>The user's custom name they want to display on their profile</td>
+						<td>String</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- Additional POST methods go here -->
+
+		<div class="article">
+			<p><strong>Reset User Password URL:</strong> <a target="_blank"
+					href="http://localhost:8080/api/user/reset-password">http://localhost:8080/api/user/reset-password</a>
+			</p>
+
+			<p>Replaces a user's current password with a new chosen one</p>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>email</td>
+						<td>The user's email associated with their account</td>
+						<td>String</td>
+					</tr>
+					<tr>
+						<td>currentPassword</td>
+						<td>The user's current password for their account</td>
+						<td>String</td>
+					</tr>
+					<tr>
+						<td>newPassword</td>
+						<td>The user's new password for their account</td>
+						<td>String</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="article">
+			<p><strong>Log Transportation Data URL:</ http://localhost:8080/api/transportation/log-transportation">
+					http://localhost:8080/api/transportation/log-transportation</a></p>
+
+			<p>Write the transportation data of the current day into the API database</p>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>transportationType</td>
+						<td>The chosen transportation vehicle used</td>
+						<td>String</td>
+					</tr>
+					<tr>
+						<td>distance</td>
+						<td>The total distance that the user has traveled in kilometers</td>
+						<td>Integer</td>
+					</tr>
+					<tr>
+						<td>fuelType</td>
+						<td>The type of fuel used within the vehicle</td>
+						<td>String</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="article">
+			<p><strong>Emission Calculation URL:</strong> <a target="_blank"
+					href="http://localhost:8080/api/transportation/emission-calculate">http://localhost:8080/api/transportation/emission-calculate</a>
+			</p>
+
+			<p>Calculates the total Emissions of a single day</p>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>transportationType</td>
+						<td>The chosen transportation vehicle used</td>
+						<td>String</td>
+					</tr>
+					<tr>
+						<td>distance</td>
+						<td>The total distance that the user has traveled in kilometers</td>
+						<td>Integer</td>
+					</tr>
+					<tr>
+						<td>fuelType</td>
+						<td>The type of fuel used within the vehicle</td>
+						<td>String</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="article">
+			<p><strong>Compare Emission Rates URL:</strong> <a target="_blank"
+					href="http://localhost:8080/api/transportation/compare-emission">http://localhost:8080/api/transportation/compare-emission</a>
+			</p>
+
+			<p>Compares the Total Emissions calculated over two different distances including vehicle and fuel types</p>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>distance1</td>
+						<td>The first distance that the user has traveled in kilometers</td>
+						<td>Integer</td>
+					</tr>
+					<tr>
+						<td>vehicle</td>
+						<td>The chosen transportation vehicle used</td>
+						<td>String</td>
+					</tr>
+					<tr>
+						<td>fuelType</td>
+						<td>The type of fuel used within the vehicle</td>
+						<td>String</td>
+					</tr>
+					<tr>
+						<td>distance2</td>
+						<td>The second distance that the user has traveled in kilometers</td>
+						<td>Integer</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- Additional API methods go here -->
+
+	</div>
+
+	<div class="section">
+		<h4>Responses To Input:</h4>
+
+		<p><strong>Successful Request:</strong> Returns a 200 response code and calculates results for each function and
+			displays it to the user.</p>
+		<p><strong>Unsuccessful Request:</strong> Returns a 400 response code and displays to the user what the error is
+			and/or where the error was found.</p>
+
+		<h5>The JSON Description of Responses:</h5>
+
+		<p><strong>Successful Response:</strong></p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Parameter</th>
+					<th>Result of Method Used</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>error</td>
+					<td>false</td>
+				</tr>
+				<tr>
+					<td>result</td>
+					<td>An appropriate response will be generated based on the method used and displayed to the user.
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p><strong>Unsuccessful Response:</strong></p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Parameter</th>
+					<th>Result of Method Used</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>error</td>
+					<td>true</td>
+				</tr>
+				<tr>
+					<td>result</td>
+					<td>An appropriate error response will be displayed to the user and will alert where the error was
+						found.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
 </body>
 
