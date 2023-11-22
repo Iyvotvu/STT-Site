@@ -136,7 +136,7 @@
 
 		<div class="article">
 			<p><strong>Emission Reduction Tips URL:</strong> <a target="_blank"
-					href="https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-reduction-tips">https://sustainable-transportation-tracker.onrender.com/api/transportation/emissions-reduction-tips</a>
+					href="https://sustainable-transportation-tracker.onrender.com/api/transportation/emission-reduction-tips">https://sustainable-transportation-tracker.onrender.com/api/transportation/emission-reduction-tips</a>
 			</p>
 
 			<p>Fetches a random tip from the database to be displayed to the user</p>
@@ -159,123 +159,65 @@
 			</table>
 		</div>
 
-		<!-- Additional GET methods go here -->
-
 		<div class="article">
 			<h4>Restricted GET Methods</h4>
 			<!-- Describe restricted GET methods here -->
+			<p><strong>Weekly Vehicle Emissions URL:</strong> <a target="_blank"
+					href="https://sustainable-transportation-tracker.onrender.com/api/transportation/weekly-vehicle-emissions">https://sustainable-transportation-tracker.onrender.com/api/transportation/weekly-vehicle-emissions</a>
+			</p>
+
+			<p>Fetches all the users logged emission for each week and compares it to the previous week to see if they
+				have reduced their emissions.</p>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>week{week-number}</td>
+						<td>Will show if they increased/decreased emission compared to previous week</td>
+						<td>String</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="article">
+				<p><strong>User List URL:</strong> <a target="_blank"
+						href="https://sustainable-transportation-tracker.onrender.com/api/transportation/get-user-list">https://sustainable-transportation-tracker.onrender.com/api/transportation/get-user-list</a>
+				</p>
+
+				<p>This would be used in conjunction with the Compare user emission, this GET will fetch all users
+					registered so you can easily get their username to use it to compare later.</p>
+
+				<table>
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+							<th>DataType</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>users</td>
+							<td>A list of all the registered users.</td>
+							<td>String</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 
 		<div class="article">
 			<h4>POST Methods</h4>
 
-			<p><strong>Create User URL:</strong> <a target="_blank"
-					href="http://localhost:8080/api/user/create-user">http://localhost:8080/api/user/create-user</a></p>
-
-			<p>Creates a new user account for logging in and using the API application</p>
-
-			<table>
-				<thead>
-					<tr>
-						<th>Parameter</th>
-						<th>Description</th>
-						<th>DataType</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>email</td>
-						<td>The user's email they want to associate their account with</td>
-						<td>String</td>
-					</tr>
-					<tr>
-						<td>password</td>
-						<td>The user's password to associate their account with</td>
-						<td>String</td>
-					</tr>
-					<tr>
-						<td>displayName</td>
-						<td>The user's custom name they want to display on their profile</td>
-						<td>String</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<!-- Additional POST methods go here -->
-
-		<div class="article">
-			<p><strong>Reset User Password URL:</strong> <a target="_blank"
-					href="http://localhost:8080/api/user/reset-password">http://localhost:8080/api/user/reset-password</a>
-			</p>
-
-			<p>Replaces a user's current password with a new chosen one</p>
-
-			<table>
-				<thead>
-					<tr>
-						<th>Parameter</th>
-						<th>Description</th>
-						<th>DataType</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>email</td>
-						<td>The user's email associated with their account</td>
-						<td>String</td>
-					</tr>
-					<tr>
-						<td>currentPassword</td>
-						<td>The user's current password for their account</td>
-						<td>String</td>
-					</tr>
-					<tr>
-						<td>newPassword</td>
-						<td>The user's new password for their account</td>
-						<td>String</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<div class="article">
-			<p><strong>Log Transportation Data URL:</ http://localhost:8080/api/transportation/log-transportation">
-					http://localhost:8080/api/transportation/log-transportation</a></p>
-
-			<p>Write the transportation data of the current day into the API database</p>
-
-			<table>
-				<thead>
-					<tr>
-						<th>Parameter</th>
-						<th>Description</th>
-						<th>DataType</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>transportationType</td>
-						<td>The chosen transportation vehicle used</td>
-						<td>String</td>
-					</tr>
-					<tr>
-						<td>distance</td>
-						<td>The total distance that the user has traveled in kilometers</td>
-						<td>Integer</td>
-					</tr>
-					<tr>
-						<td>fuelType</td>
-						<td>The type of fuel used within the vehicle</td>
-						<td>String</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<div class="article">
 			<p><strong>Emission Calculation URL:</strong> <a target="_blank"
-					href="http://localhost:8080/api/transportation/emission-calculate">http://localhost:8080/api/transportation/emission-calculate</a>
+					href="https://sustainable-transportation-tracker.onrender.com/api/transportation/emission-calculate">https://sustainable-transportation-tracker.onrender.com/api/transportation/emission-calculate</a>
 			</p>
 
 			<p>Calculates the total Emissions of a single day</p>
@@ -308,12 +250,15 @@
 			</table>
 		</div>
 
+
 		<div class="article">
-			<p><strong>Compare Emission Rates URL:</strong> <a target="_blank"
-					href="http://localhost:8080/api/transportation/compare-emission">http://localhost:8080/api/transportation/compare-emission</a>
+			<h4>Restricted POST Methods</h4>
+
+			<p><strong>Register User URL:</strong> <a target="_blank"
+					href="https://sustainable-transportation-tracker.onrender.com/api/transportation/register">https://sustainable-transportation-tracker.onrender.com/api/transportation/register</a>
 			</p>
 
-			<p>Compares the Total Emissions calculated over two different distances including vehicle and fuel types</p>
+			<p>Creates a new user account for logging in and using the Restricted API applications</p>
 
 			<table>
 				<thead>
@@ -325,24 +270,161 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>distance1</td>
-						<td>The first distance that the user has traveled in kilometers</td>
-						<td>Integer</td>
+						<td>email</td>
+						<td>The user's email they want to associate their account with</td>
+						<td>String</td>
 					</tr>
 					<tr>
-						<td>vehicle</td>
+						<td>password</td>
+						<td>The user's password to associate their account with</td>
+						<td>String</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- Additional POST methods go here -->
+
+		<div class="article">
+			<p><strong>Login User URL:</strong> <a target="_blank"
+					href="https://sustainable-transportation-tracker.onrender.com/api/transportation/login">https://sustainable-transportation-tracker.onrender.com/api/transportation/login</a>
+			</p>
+
+			<p>This can be used to create a JWT upon Successful login to a registered account and with the JWT you can
+				have access to the Restricted API's</p>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>email</td>
+						<td>The user's email associated with their account</td>
+						<td>String</td>
+					</tr>
+					<tr>
+						<td>password</td>
+						<td>The user's current password for their account</td>
+						<td>String</td>
+					</tr>
+					<tr>
+						<td>message</td>
+						<td>This will display if login was a Successful or not</td>
+						<td>String</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+		<div class="article">
+			<p><strong>Log Transportation Data URL:</strong> <a target="_blank"
+					href="https://sustainable-transportation-tracker.onrender.com/api/transportation/log-transportation">https://sustainable-transportation-tracker.onrender.com/api/transportation/log-transportation</a>
+			</p>
+
+			<p>Write the transportation data of the current week into the API database</p>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>transportationType</td>
 						<td>The chosen transportation vehicle used</td>
 						<td>String</td>
+					</tr>
+					<tr>
+						<td>distance</td>
+						<td>The total distance that the user has traveled in kilometers</td>
+						<td>Integer</td>
 					</tr>
 					<tr>
 						<td>fuelType</td>
 						<td>The type of fuel used within the vehicle</td>
 						<td>String</td>
 					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+
+		<div class="article">
+			<p><strong>Compare Emission Rates URL:</strong> <a target="_blank"
+					href="https://sustainable-transportation-tracker.onrender.com/api/transportation/compare-emissions">https://sustainable-transportation-tracker.onrender.com/api/transportation/compare-emissions</a>
+			</p>
+
+			<p>Compares a chosen weeks emission to another users for that same weeks emission and see if you had more or
+				less than them.</p>
+
+			<table>
+				<thead>
 					<tr>
-						<td>distance2</td>
-						<td>The second distance that the user has traveled in kilometers</td>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>user</td>
+						<td>This will be the username of the person you want to compare to which you can get from the
+							user list API.</td>
 						<td>Integer</td>
+					</tr>
+					<tr>
+						<td>week</td>
+						<td>The week you want to compare to</td>
+						<td>String</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="article">
+			<p><strong>Transportation Swapping URL:</strong> <a target="_blank"
+					href="https://sustainable-transportation-tracker.onrender.com/api/transportation/transportation-swapping">https://sustainable-transportation-tracker.onrender.com/api/transportation/transportation-swapping</a>
+			</p>
+
+			<p>Here you can select a week you have logged and change the car and fueltype to see if you would have had
+				more or less emission, so you can use it next time to reduce emissions.</p>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Parameter</th>
+						<th>Description</th>
+						<th>DataType</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td>week</td>
+						<td>The weeks emission you want to check and compare to</td>
+						<td>Integer</td>
+					</tr>
+
+					<tr>
+						<td>transportationType</td>
+						<td>The vehicle you want to swap to.</td>
+						<td>String</td>
+					</tr>
+
+					<tr>
+						<td>fuelType</td>
+						<td>The fuelType you want to swap to.</td>
+						<td>String</td>
 					</tr>
 				</tbody>
 			</table>
@@ -350,6 +432,41 @@
 
 		<!-- Additional API methods go here -->
 
+	</div>
+
+	<div class="article">
+		<p><strong>Emission Calculation URL:</strong> <a target="_blank"
+				href="http://localhost:8080/api/transportation/emission-calculate">http://localhost:8080/api/transportation/emission-calculate</a>
+		</p>
+
+		<p>Calculates the total Emissions of a single day</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Parameter</th>
+					<th>Description</th>
+					<th>DataType</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>transportationType</td>
+					<td>The chosen transportation vehicle used</td>
+					<td>String</td>
+				</tr>
+				<tr>
+					<td>distance</td>
+					<td>The total distance that the user has traveled in kilometers</td>
+					<td>Integer</td>
+				</tr>
+				<tr>
+					<td>fuelType</td>
+					<td>The type of fuel used within the vehicle</td>
+					<td>String</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
 	<div class="section">
